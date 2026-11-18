@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Street Fighter Clone</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="arrow" viewBox="0 0 16 16">
+      <path d="M2 8H13M8 3L13 8L8 13" />
+    </symbol>
+  </svg>
+
+  <div id="game">
+    <div id="hud">
+      <div class="side">
+        <div class="name">RYU</div>
+        <div class="bar"><div class="fill" id="h1"></div></div>
+        <div class="dots" id="d1"><i></i><i></i></div>
+      </div>
+      <div class="vs">VS</div>
+      <div class="side right">
+        <div class="name">KEN</div>
+        <div class="bar"><div class="fill" id="h2"></div></div>
+        <div class="dots" id="d2"><i></i><i></i></div>
+      </div>
+    </div>
+
+    <canvas id="c" width="896" height="448"></canvas>
+    <div id="banner"></div>
+
+    <div id="start">
+      <h1>STREET FIGHTER</h1>
+      <p>P1: W A S D + U I J K &nbsp;|&nbsp; P2: Flechas + Numpad 4 5 1 2</p>
+
+      <div class="moves">
+        <div class="move">
+          <span class="mname">Hadouken</span>
+          <span class="seq">
+            <svg class="ar a90"><use href="#arrow"/></svg>
+            <svg class="ar a45"><use href="#arrow"/></svg>
+            <svg class="ar a0"><use href="#arrow"/></svg>
+            <span class="plus">+ Puño</span>
+          </span>
+        </div>
+        <div class="move">
+          <span class="mname">Tatsumaki</span>
+          <span class="seq">
+            <svg class="ar a90"><use href="#arrow"/></svg>
+            <svg class="ar a135"><use href="#arrow"/></svg>
+            <svg class="ar a180"><use href="#arrow"/></svg>
+            <span class="plus">+ Patada</span>
+          </span>
+        </div>
+        <div class="move">
+          <span class="mname">Shoryuken</span>
+          <span class="seq">
+            <svg class="ar a0"><use href="#arrow"/></svg>
+            <svg class="ar a90"><use href="#arrow"/></svg>
+            <svg class="ar a45"><use href="#arrow"/></svg>
+            <span class="plus">+ Puño</span>
+          </span>
+        </div>
+      </div>
+
+      <p>Bloqueo: mantener atrás &nbsp;|&nbsp; H = ver hitboxes</p>
+      <p id="err"></p>
+      <button id="btn" type="button">PULSA PARA EMPEZAR</button>
+      <p class="hint">o pulsa ENTER</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
